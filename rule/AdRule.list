@@ -13,7 +13,7 @@ IP-CIDR, 118.89.204.198/32
 DOMAIN, appcloud2.in.zhihu.com
 DOMAIN, mqtt.zhihu.com
 DOMAIN, sugar.zhihu.com
-user-agent, avos*
+USER-AGENT, avos*
 
 # HDOBOX影视App去广告
 DOMAIN-SUFFIX, applovin.com

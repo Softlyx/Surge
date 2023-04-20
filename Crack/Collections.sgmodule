@@ -2,11 +2,13 @@
 #!desc=自用破解合集
 
 [MITM]
-hostname = %APPEND% mb3admin.com,restore-access.indream.app
+hostname = %APPEND% mb3admin.com,restore-access.indream.app,*.aliyundrive.com
 
 [Script]
 # > Emby播放权限 %APPEND% mb3admin.com
 EmbyPremiere.js = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/rartv/SurgeScript/main/EmbyPremiere/EmbyPremiere.js
 # > Nicegram会员 restore-access.indream.app
 Nicegram会员 = type=http-request,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/Surge/main/Crack/Nicegram.js,script-update-interval=0
+# > 阿里云盘净化 *.aliyundrive.com
+阿里云盘净化 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/ALiDrive.js,script-update-interval=0
 

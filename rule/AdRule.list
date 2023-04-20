@@ -1,30 +1,30 @@
 #安全浏览 解除限制
-DOMAIN-suffix, safebrowsing.urlsec.qq.com
-DOMAIN-suffix, safebrowsing.googleapis.com
-DOMAIN-suffix, lookup.api.bsb.baidu.com
+DOMAIN-SUFFIX, safebrowsing.urlsec.qq.com
+DOMAIN-SUFFIX, safebrowsing.googleapis.com
+DOMAIN-SUFFIX, lookup.api.bsb.baidu.com
 
 # 爱思极速版去开屏广告
 DOMAIN, d.image.i4.cn
 
 # 知乎AD屏蔽
-domain, 118.89.204.198
-domain-keyword, 118.89.204.198
-ip-cidr, 118.89.204.198/32
+IP-CIDR, 118.89.204.198/32
+DOMAIN-KEYWORD, 118.89.204.198/32
+IP-CIDR, 118.89.204.198/32
 DOMAIN, appcloud2.in.zhihu.com
 DOMAIN, mqtt.zhihu.com
 DOMAIN, sugar.zhihu.com
 user-agent, avos*
 
 # HDOBOX影视App去广告
-DOMAIN-suffix, applovin.com
-DOMAIN-suffix, applvn.com
-DOMAIN-suffix, doubleclick.net
+DOMAIN-SUFFIX, applovin.com
+DOMAIN-SUFFIX, applvn.com
+DOMAIN-SUFFIX, doubleclick.net
 
 # 网络播放去广告
 DOMAIN, googleads.g.doubleclick.net
 
 # YouTube 去底部广告
-DOMAIN-suffix, ehg-youtube.hitbox.com
+DOMAIN-SUFFIX, ehg-youtube.hitbox.com
 
 # 避免迅雷版权问题
 DOMAIN, hub5idx.v6.shub.sandai.net
@@ -32,7 +32,7 @@ DOMAIN, hub5emu.v6.shub.sandai.net
 DOMAIN, hub5btmain.v6.shub.sandai.net
 
 # 贴吧AD处理
-ip-cidr,180.76.76.200/32,no-resolve
+IP-CIDR,180.76.76.200/32,no-resolve
 DOMAIN,im.tieba.baidu.com
 
 # 高德地图

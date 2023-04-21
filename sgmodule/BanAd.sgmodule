@@ -65,9 +65,6 @@ DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+ url reject
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\?? - reject
 
-# 米家 hostname = home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? - reject-dict
-
 # N
 # O
 
@@ -115,6 +112,9 @@ http://162.209.190.203:510/tegou.php/v6/top_notice - reject
 # Z
 
 [Map Local]
+
+# 米家 hostname = home.mi.com
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
 # 掌上英雄联盟 hostname = mlol.qt.qq.com
 ^https:\/\/mlol\.qt\.qq\.com\/go\/recommend data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"

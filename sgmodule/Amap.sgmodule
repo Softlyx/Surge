@@ -1,0 +1,66 @@
+#!name=高德地图净化
+#!desc=高德地图净化
+
+// ==UserScript==
+// @ScriptName        高德地图☆净化，搬运RuCu6+墨鱼
+// @UpdateTime        2023-02-08
+// @Suitable          自行观看“# > ”注释内容
+// ==/UserScript==
+
+[MITM]
+hostname = %APPEND% m5*.amap.com,sns.amap.com
+
+[Rule]
+# 根据User-Agent精准屏蔽amdc、这条必须添加否则脚本失效
+AND,((OR,((USER-AGENT,*AMap*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT
+DOMAIN, amdc.m.taobao.com, REJECT
+DOMAIN, amap-aos-info-nogw.amap.com, REJECT
+DOMAIN, awaken.amap.com, REJECT
+DOMAIN, free-aos-cdn-image.amap.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/amdc\.m\.taobao\.com - reject
+^https?:\/\/mps\.amap\.com\/ws\/mps\/scene\? - reject
+# > 高德地图_路线规划下方广告
+^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? - reject
+# > 高德地图_Tip请求
+^https?:\/\/.*\.amap\.com\/ws\/boss\/order_web\/\w{8}_information - reject
+# > 高德地图_通用广告请求
+^https?:\/\/.*\.amap\.com\/ws\/asa\/ads_attribution url reject
+# > 高德地图_搜索框scene
+^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend - reject
+# > 高德地图_首页左上角gif
+^https?:\/\/.*\.amap\.com\/uploadimg\/\w+\.gif - reject
+# > 高德地图_左下天气
+^https?:\/\/.*\.amap\.com\/ws\/valueadded\/weather - reject
+
+
+[Map Local]
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-route-plan|main-page-(assets|location)) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/shield\/(search\/new_hotword|scene\/recommend|search_poi\/(city_feed|tips_adv)) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|valueadded\/weather|asa\/ads_attribution)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/sns\.amap\.com\/ws\/(msgbox\/pull(_mp)?|userview\/footprint) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order(_web\/friendly_information|\/car\/king_toolbox_car_bubble)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+
+[Script]
+
+# > 高德地图_底部tab栏角标
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/message\/notice\/list requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_首页右中广告
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_附近页面
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/nearbyrec_smart requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_打车页面处理
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/promotion-web\/resource requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_首页底部处理
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_开屏广告
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_首页顶部推广
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_我的页面
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+# > 高德地图_搜索框热词
+高德地图_底部tab栏角标 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Amap/Amap.js,script-update-interval=0
+

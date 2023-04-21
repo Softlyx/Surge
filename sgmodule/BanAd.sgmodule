@@ -117,4 +117,4 @@ http://162.209.190.203:510/tegou.php/v6/top_notice - reject
 [Map Local]
 
 # 掌上英雄联盟 hostname = mlol.qt.qq.com
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend - reject-dict
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"

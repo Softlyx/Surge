@@ -71,6 +71,10 @@ DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 
 [Map Local]
 
+# 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com
+^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic url data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+
 # 米家 hostname = home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 

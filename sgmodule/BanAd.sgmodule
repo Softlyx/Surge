@@ -34,7 +34,6 @@ DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 
 # 美团 hostname = img.meituan.net,s3plus.meituan.net
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? - reject-dict
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+ - reject
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\?? - reject
 
@@ -59,6 +58,10 @@ DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
+
+
+# 美团 hostname = img.meituan.net,s3plus.meituan.net
+^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
 # 米家 hostname = home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"

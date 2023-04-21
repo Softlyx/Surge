@@ -24,92 +24,50 @@ DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 
 [URL Rewrite]
 
-# 数字
-
 # 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo - reject
-^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic - reject-200
-^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject-200
-
-# A
-# B
-
-# C
-# D
+^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic - reject
+^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
 
 # 大师兄影视 hostname = sdk.alibaba.com.ailbaba.me
-^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version - reject-200
-^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ - reject-200
-^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? - reject-200
-
-# E
-# F
-# G
-# H
-# I
-# J
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version - reject
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ - reject
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? - reject
 
 # 交管12123 hostname = gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
 
-# K
-
 # 肯德基 hostname = res.kfc.com.cn
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
-
-# L
-# M
 
 # 美团 hostname = img.meituan.net,s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? - reject-dict
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+ url reject
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\?? - reject
 
-# N
-# O
-
-# omofun hostname = 103.91.210.141:2515
-^https?:\/\/103\.91\.210\.141:2515\/xgapp\.php\/v2\/top_notice? - reject
-
-# P
-
 # 拼多多广告 hostname = adim.pinduoduo.com,api.yangkeduo.com
 ^https:\/\/adim\.pinduoduo\.com\/i\/toutiao - reject
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
 
-# Q
-
 # 趣听屏蔽弹窗 hostname = api.bspapp.com
-# ^https:\/\/api\.bspapp\.com\/client - reject-200
-
-# R
-# S
-# T
+# ^https:\/\/api\.bspapp\.com\/client - reject
 
 # 淘宝 hostname = heic.alicdn.com
 ^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ - reject
-^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png) - reject-200
+^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png) - reject
 
 # 特狗影视 hostname = 162.209.190.203
-http://162.209.190.203:510/tegou.php/v6/top_notice - reject
-
-# U
-# V
-# W
+# http://162.209.190.203:510/tegou.php/v6/top_notice - reject
 
 # 唯品会  hostname = mapi.appvipshop.com,b.appsimg.com
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v - reject-200
-^https?:\/\/b\.appsimg\.com\/upload\/momin\/202[3-9]{1}\/.+\/.+\/.+\/.+\.jpg!85\.webp - reject-200
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/coupon\/float_entrance\/get\?api_key - reject-200
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get - reject-200
-
-# X
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v - reject
+^https?:\/\/b\.appsimg\.com\/upload\/momin\/202[3-9]{1}\/.+\/.+\/.+\/.+\.jpg!85\.webp - reject
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/coupon\/float_entrance\/get\?api_key - reject
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get - reject
 
 # 迅雷 hostname = api-shoulei-ssl.xunlei.com
-^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet - reject-200
+^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet - reject
 
-# Y
-# Z
 
 [Map Local]
 

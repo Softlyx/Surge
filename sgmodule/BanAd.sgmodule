@@ -21,21 +21,21 @@ hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vi
 DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 
 #安全浏览 解除限制
-DOMAIN-SUFFIX, safebrowsing.urlsec.qq.com
-DOMAIN-SUFFIX, safebrowsing.googleapis.com
-DOMAIN-SUFFIX, lookup.api.bsb.baidu.com
+DOMAIN-SUFFIX, safebrowsing.urlsec.qq.com, REJECT
+DOMAIN-SUFFIX, safebrowsing.googleapis.com, REJECT
+DOMAIN-SUFFIX, lookup.api.bsb.baidu.com, REJECT
 
 # 爱思去开屏广告
-DOMAIN, d.image.i4.cn
+DOMAIN, d.image.i4.cn, REJECT
 
 # 避免迅雷版权问题
-DOMAIN, hub5idx.v6.shub.sandai.net
-DOMAIN, hub5emu.v6.shub.sandai.net
-DOMAIN, hub5btmain.v6.shub.sandai.net
+DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
+DOMAIN, hub5emu.v6.shub.sandai.net, REJECT
+DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 
 # 贴吧AD处理
-IP-CIDR,180.76.76.200/32,no-resolve
-DOMAIN,im.tieba.baidu.com
+IP-CIDR,180.76.76.200/32,no-resolve, REJECT
+DOMAIN,im.tieba.baidu.com, REJECT
 
 
 [URL Rewrite]

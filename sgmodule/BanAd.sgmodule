@@ -15,11 +15,27 @@ hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vi
 涩涩视频 = type=http-response,pattern=^https:\/\/files\.(yuchenglw|honghufly)\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js,script-update-interval=0
 
 
-
 [Rule]
 
 # 中国联通 hostname = m1.ad.10010.com
 DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
+
+#安全浏览 解除限制
+DOMAIN-SUFFIX, safebrowsing.urlsec.qq.com
+DOMAIN-SUFFIX, safebrowsing.googleapis.com
+DOMAIN-SUFFIX, lookup.api.bsb.baidu.com
+
+# 爱思去开屏广告
+DOMAIN, d.image.i4.cn
+
+# 避免迅雷版权问题
+DOMAIN, hub5idx.v6.shub.sandai.net
+DOMAIN, hub5emu.v6.shub.sandai.net
+DOMAIN, hub5btmain.v6.shub.sandai.net
+
+# 贴吧AD处理
+IP-CIDR,180.76.76.200/32,no-resolve
+DOMAIN,im.tieba.baidu.com
 
 
 [URL Rewrite]

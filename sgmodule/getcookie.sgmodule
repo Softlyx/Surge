@@ -12,16 +12,16 @@ hostname= %APPEND% c.tieba.baidu.com, app.bilibili.com, m.bilibili.com, auth.ali
 
 # 百度贴吧  c.tieba.baidu.com
 贴吧获取Cookie = type=http-request,pattern=https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path= https://raw.githubusercontent.com/Softlyx/QuantumultX/main/Task/TieBa.js
-贴吧签到 = type=cron,cronexp=0 9 * * *,script-path= https://raw.githubusercontent.com/Softlyx/QuantumultX/main/Task/TieBa.js
+贴吧签到 = type=cron,cronexp=10 1,8 * * ?,script-path= https://raw.githubusercontent.com/Softlyx/QuantumultX/main/Task/TieBa.js
 
 # 哔哩哔哩  app.bilibili.com, m.bilibili.com
 #以下cookie获取方式二选其一即可
 B站获取Cookie(APP) = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 #B站获取Cookie(网页) = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
-B站每日任务 = type=cron,cronexp=30 7 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+B站每日任务 = type=cron,cronexp=30 1 * * ?,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 
 # 阿里云盘  auth.aliyundrive.com
 # 安装后打开：https://auth.aliyundrive.com/v2/account/token 获取token
 # 添加boxjs订阅： https://raw.githubusercontent.com/lowking/Scripts/master/lowking.boxjs.json
 阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.aliyundrive.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
-阿里云盘签到 = type=cron,cronexp="0 10 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+阿里云盘签到 = type=cron,cronexp="10 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js

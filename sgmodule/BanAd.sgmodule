@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com
 
 
 [Script]
@@ -81,6 +81,11 @@ DOMAIN,im.tieba.baidu.com, REJECT
 
 # 米家 hostname = home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+
+# one hostname = api.0qda82zu.com
+^https:\/\/api\.0qda82zu\.com\/v2\.4\/ad\/space data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
+
+
 
 # 趣听屏蔽弹窗 hostname = api.bspapp.com
 # ^https:\/\/api\.bspapp\.com\/client data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 

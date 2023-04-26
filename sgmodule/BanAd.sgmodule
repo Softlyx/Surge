@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com,api.liquidlink.cn
 
 
 [Script]
@@ -75,6 +75,8 @@ DOMAIN,im.tieba.baidu.com, REJECT
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
+# javdb hostname = api.liquidlink.cn
+^https:\/\/api\.liquidlink\.cn\/api\/v2\/ios\/dvkft4\/config data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
 # 美团 hostname = img.meituan.net,s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
@@ -84,8 +86,6 @@ DOMAIN,im.tieba.baidu.com, REJECT
 
 # one hostname = api.0qda82zu.com
 ^https:\/\/api\.0qda82zu\.com\/v2\.4\/ad\/space data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
-
-
 
 # 趣听屏蔽弹窗 hostname = api.bspapp.com
 # ^https:\/\/api\.bspapp\.com\/client data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 

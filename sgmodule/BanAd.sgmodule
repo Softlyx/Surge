@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com,api.liquidlink.cn,api.pxxgg.xyz
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com,api.liquidlink.cn,api.pxxgg.xyz
 
 
 [Script]
@@ -13,6 +13,8 @@ hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vi
 阿里云盘净化 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/ALiDrive.js,script-update-interval=0
 # 涩涩视频 files.yuchenglw.com,files.honghufly.com
 涩涩视频 = type=http-response,pattern=^https:\/\/files\.(yuchenglw|honghufly)\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js,script-update-interval=0
+# JavDB hostname = api.pxxgg.xyz
+JavDB = type=http-response,pattern=^https?:\/\/api\.pxxgg\.xyz\/api,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js
 
 
 [Rule]

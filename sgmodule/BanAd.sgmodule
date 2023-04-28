@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -59,7 +59,7 @@ DOMAIN,im.tieba.baidu.com, REJECT
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+ - reject
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\?? - reject
 
-# 拼多多广告 hostname = adim.pinduoduo.com,api.yangkeduo.com
+# 拼多多广告 hostname = api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com
 ^https:\/\/adim\.pinduoduo\.com\/i\/toutiao - reject
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
 

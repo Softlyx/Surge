@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -19,7 +19,7 @@ JavDB = type=http-response,pattern=^https?:\/\/api\.pxxgg\.xyz\/api,requires-bod
 
 [Rule]
 
-# 中国联通 hostname = m1.ad.10010.com
+# 中国联通 
 DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 
 #安全浏览 解除限制
@@ -72,7 +72,7 @@ DOMAIN,im.tieba.baidu.com, REJECT
 
 [Map Local]
 
-# 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com
+# 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com  /////////////////////
 ^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
@@ -81,7 +81,7 @@ DOMAIN,im.tieba.baidu.com, REJECT
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
-# 美团 hostname = img.meituan.net,s3plus.meituan.net
+# 美团 hostname = img.meituan.net,s3plus.meituan.net  /////////////////////
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
 # 米家 hostname = home.mi.com
@@ -93,7 +93,7 @@ DOMAIN,im.tieba.baidu.com, REJECT
 # 趣听屏蔽弹窗 hostname = api.bspapp.com
 # ^https:\/\/api\.bspapp\.com\/client data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
-# 淘宝 hostname = heic.alicdn.com
+# 淘宝 hostname = heic.alicdn.com  /////////////////////
 # ^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
 # 唯品会  hostname = mapi.appvipshop.com,b.appsimg.com

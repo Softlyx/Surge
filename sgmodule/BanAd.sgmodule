@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,api.douban.com,openapi.vmall.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,home.mi.com,103.91.210.141:2515,adim.pinduoduo.com,api.yangkeduo.com,api.bspapp.com,heic.alicdn.com,162.209.190.203,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,m1.ad.10010.com,mlol.qt.qq.com,api.0qda82zu.com
 
 
 [Script]
@@ -44,6 +44,10 @@ DOMAIN,im.tieba.baidu.com, REJECT
 
 # 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo - reject
+
+# 豆瓣 hostname = api.douban.com
+^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
+^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
 
 # 交管12123 hostname = gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject

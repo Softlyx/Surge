@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,img.meituan.net,s3plus.meituan.net,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -55,7 +55,7 @@ DOMAIN,im.tieba.baidu.com, REJECT
 # 肯德基 hostname = res.kfc.com.cn
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 
-# 美团 hostname = img.meituan.net,s3plus.meituan.net
+# 美团 hostname = flowplus.meituan.net,img.meituan.net,s3plus.meituan.net
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+ - reject
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\?? - reject
 
@@ -81,8 +81,10 @@ DOMAIN,im.tieba.baidu.com, REJECT
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
-# 美团 hostname = img.meituan.net,s3plus.meituan.net  /////////////////////
+# 美团 hostname = flowplus.meituan.net,img.meituan.net,s3plus.meituan.net  /////////////////////
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$ data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
 # 米家 hostname = home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"

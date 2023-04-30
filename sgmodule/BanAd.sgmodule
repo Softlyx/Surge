@@ -12,9 +12,9 @@ hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,ap
 # 阿里云盘净化 *.aliyundrive.com
 阿里云盘净化 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/ALiDrive.js,script-update-interval=0
 # 涩涩视频 files.yuchenglw.com,files.honghufly.com
-涩涩视频 = type=http-response,pattern=^https:\/\/files\.(yuchenglw|honghufly)\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/sssp.js,script-update-interval=0
+涩涩视频 = type=http-response,pattern=^https:\/\/files\.(yuchenglw|honghufly)\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/SSsp.js,script-update-interval=0
 # JavDB hostname = api.pxxgg.xyz
-JavDB = type=http-response,pattern=^https?:\/\/api\.pxxgg\.xyz\/api,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js,script-update-interval=0
+JavDB = type=http-response,pattern=^https?:\/\/api\.pxxgg\.xyz\/api,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/JavDB.js,script-update-interval=0
 
 
 [Rule]

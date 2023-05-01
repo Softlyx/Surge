@@ -1,0 +1,6 @@
+#!name=自用？MITM
+#!desc=For MITM
+
+[MITM]
+
+hostname = %APPEND% -*.byteoversea.com, -*.tik-tokapi.com, -*.tiktokv.com, -*.snssdk.com, -*.amemv.com, -*.icloud.com, -*.apple.com, www.google.cn, www.firefox.com.cn, api.abema.io

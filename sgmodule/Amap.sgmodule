@@ -37,4 +37,4 @@ http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull requires-body=1,scrip
 
 [MITM]
 
-hostname = %INSERT% m5*.amap.com, sns.amap.com
+hostname = %APPEND% m5*.amap.com, sns.amap.com

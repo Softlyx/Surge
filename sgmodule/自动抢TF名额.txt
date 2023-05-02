@@ -1,0 +1,23 @@
+自动加入tf并关闭本脚本模块
+模块内容（点击直接复制）
+⚠️创建本地模块：
+#!name=Auto module for JavaScripts
+#!desc=For those JavaScripts who should be disabled after evaluation successful.
+
+[Script]
+Auto join TF = type=cron,cronexp=*/1 * * * * *,script-path=https://github.com/xf857/jiedian/blob/main/Auto_join_TF.js?raw=true,wake-system=0,timeout=180
+
+⚠️添加获取ID信息脚本：
+[Script]
+TF信息获取 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$,requires-body=0,script-path=https://github.com/xf857/jiedian/blob/main/TF_keys.js?raw=true
+
+⚠️MITM添加域名并打开 H2 ：testflight.apple.com
+
+⚠️使用方法：
+1: 开启surge http api
+2: 打开“TF信息获取”脚本后打开testflight app获取信息，然后关闭该脚本
+3: 手动在surge 脚本编辑器里点击左下角设置图标，点击$persistentStore，添加名为“APP_ID”的持久化数据，他们的对应的key（内容）为tf链接 https://testflight.apple.com/join/LPQmtkUs 的join后的字符串（也就是此例子的“LPQmtkUs”）⚠️：支持无限个TF链接，每个链接需要用英文逗号“,”隔开
+
+⚠️提示：
+1: 除beta已满的其他情况才会通知，可自行看日志
+2: 报错1012是因为未执行使用方法的步骤2

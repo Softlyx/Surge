@@ -53,7 +53,7 @@ URL-REGEX,^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.in
 [Script]
 
 # ～ BiliBili_哔哩哔哩_启动时开启直连模式@NobyDa
-哔哩哔哩_启动时开启直连模式 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+# 哔哩哔哩_启动时开启直连模式 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 # ～ BiliBili_哔哩哔哩_繁体CC字幕转中文简体[自行启用]@ddgksf2013
 ;哔哩哔哩_繁体CC字幕转中文简体 = type=http-response,pattern=^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js
 # ～ BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
@@ -81,7 +81,7 @@ BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗 = type=http-response,pat
 # ～ BiliBili_哔哩哔哩_直播去广告@bm7
 哔哩哔哩_直播去广告 = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 # ～ BiliBili_哔哩哔哩_标签页处理@ddgksf2013
-哔哩哔哩_标签页处理 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+# 哔哩哔哩_标签页处理 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 # ～ BiliBili_哔哩哔哩_我的页面处理@ddgksf2013
 哔哩哔哩_我的页面处理 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 # ～ BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@app2smile@ddgksf2013

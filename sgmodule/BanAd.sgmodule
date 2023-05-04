@@ -81,6 +81,9 @@ DOMAIN,im.tieba.baidu.com, REJECT
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
+# 肯德基 hostname = res.kfc.com.cn
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
 # 美团 hostname = flowplus.meituan.net,img.meituan.net,s3plus.meituan.net  /////////////////////
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$ data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"

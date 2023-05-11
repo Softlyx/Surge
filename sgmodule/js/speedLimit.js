@@ -112,7 +112,7 @@ const _Group = cache[host]?.Group;
 
 const _policy0 = cache[host]?.policy0;
 
-if (_Group && Date.now() - lastUpdateTime >= 0.16 * 3600000) $surge.setSelectGroupPolicy(`${_Group}`, `${_policy0}`);
+if (_Group && Date.now() - lastUpdateTime >= 1 * 3600000) $surge.setSelectGroupPolicy(`${_Group}`, `${_policy0}`);
 
 $done({ matched: true });
 

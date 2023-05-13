@@ -19,9 +19,6 @@ JavDB = type=http-response,pattern=^https?:\/\/api\.pxxgg\.xyz\/api,requires-bod
 
 [Rule]
 
-# 中国联通 
-DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
-
 #安全浏览 解除限制
 DOMAIN-SUFFIX, safebrowsing.urlsec.qq.com, REJECT
 DOMAIN-SUFFIX, safebrowsing.googleapis.com, REJECT
@@ -38,6 +35,11 @@ DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 # 贴吧AD处理
 IP-CIDR,180.76.76.200/32,no-resolve, REJECT
 DOMAIN,im.tieba.baidu.com, REJECT
+
+# 新浪邮箱<飞韵闪退>
+# DOMAIN-KEYWORD,pangolin,REJECT
+# DOMAIN-SUFFIX,gdt.qq.com,REJECT
+
 
 
 [URL Rewrite]

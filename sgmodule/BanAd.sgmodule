@@ -40,6 +40,12 @@ DOMAIN,im.tieba.baidu.com, REJECT
 # DOMAIN-KEYWORD,pangolin,REJECT
 # DOMAIN-SUFFIX,gdt.qq.com,REJECT
 
+# 中国联通 
+
+DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
+
+
+
 
 
 [URL Rewrite]

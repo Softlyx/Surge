@@ -39,10 +39,6 @@ DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 IP-CIDR,180.76.76.200/32,no-resolve, REJECT
 DOMAIN,im.tieba.baidu.com, REJECT
 
-# 新浪邮箱
-DOMAIN-KEYWORD,pangolin,REJECT
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-
 
 [URL Rewrite]
 

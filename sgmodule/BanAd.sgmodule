@@ -37,8 +37,8 @@ IP-CIDR, 180.76.76.200/32,no-resolve, REJECT
 DOMAIN, im.tieba.baidu.com, REJECT
 
 # 新浪邮箱/飞韵
-DOMAIN-KEYWORD, pangolin, REJECT
-DOMAIN-SUFFIX, gdt.qq.com, REJECT
+# DOMAIN-KEYWORD, pangolin, REJECT
+# DOMAIN-SUFFIX, gdt.qq.com, REJECT
 
 # 中国联通 
 DOMAIN-SUFFIX, m1.ad.10010.com, REJECT

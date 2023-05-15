@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203, *.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]

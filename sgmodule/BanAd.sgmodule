@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,mime.baidu.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -83,12 +83,6 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 # 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com  /////////////////////
 ^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
-
-# 百度输入法 hostname = mime.baidu.com
-# 百度输入法净化活动中心
-^https?:\/\/mime\.baidu\.com\/v5\/custom_page\/getdata data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 百度输入法AI侃侃
-^https?:\/\/mime\.baidu\.com\/imrobot\/v1\/pub\/relation\/get_robot_list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 # 大师兄影视 hostname = sdk.alibaba.com.ailbaba.me
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 

@@ -1,0 +1,3 @@
+[rewrite_local]
+^https?:\/\/mime\.baidu\.com\/v5\/custom_page\/getdata url reject-200
+^https?:\/\/mime\.baidu\.com\/imrobot\/v1\/pub\/relation\/get_robot_list url reject-200

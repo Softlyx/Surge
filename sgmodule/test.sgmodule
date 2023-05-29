@@ -1,3 +1,9 @@
 [rewrite_local]
-^https?:\/\/mime\.baidu\.com\/v5\/custom_page\/getdata url reject-200
-^https?:\/\/mime\.baidu\.com\/imrobot\/v1\/pub\/relation\/get_robot_list url reject-200
+
+# > 大师兄（加解集）去开屏广告，去弹窗 
+
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) url reject-200
+
+[mitm]
+
+hostname = sdk.alibaba.com.ailbaba.me

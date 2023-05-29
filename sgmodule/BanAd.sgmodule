@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,imeres.baidu.com,mbd.baidu.com,mime.baidu.com,list-app-m.i4.cn,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -45,6 +45,9 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 # 爱思助手 hostname = list-app-m.i4.cn
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 
+# 大师兄影视 hostname = sdk.alibaba.com.ailbaba.me
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/.*?\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
+
 # 豆瓣 hostname = api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
@@ -76,20 +79,6 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 # 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com  /////////////////////
 ^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
-
-# 百度输入法 hostname = imeres.baidu.com, mbd.baidu.com, mime.baidu.com
-# 百度输入法开屏
-^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-# 活动中心
-^https?:\/\/mime\.baidu\.com\/v5\/custom_page\/layout data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-# 输入法点击图标circle/joinedlist
-# 机器人 推荐短语 
-^https?:\/\/mime\.baidu\.com\/(sapi\/|imrobot\/)?v1\/(lccorpus\/usercorpussync|circle\/joinedlist|pub\/relation\/get_robot_list|lccorpus\/(applist|pannellist)) data="https://github.com/Keywos/rule/raw/main/mocks/mime.json"
-^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list data="https://github.com/Keywos/rule/raw/main/mocks/mime.json"
-^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input data="https://github.com/Keywos/rule/raw/main/mocks/bd.json"
-^https?:\/\/imeres\.baidu\.com\/imeres\/(emot-pack-test|imemmi-public)(\/\/)?\/upload\/imags\/.+\.(mp4|png|jpg|gif|jpeg) data="https://github.com/Keywos/rule/raw/main/mocks/reject-img.gif"
-^https:\/\/imeres\.baidu\.com\/common\/image2fjpeg.+\.png data="https://github.com/Keywos/rule/raw/main/mocks/reject-img.gif"
-
 
 # 大师兄影视 hostname = sdk.alibaba.com.ailbaba.me
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 

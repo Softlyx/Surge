@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,mime.baidu.com,r6.mo.baidu.com,res.mi.baidu.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -24,9 +24,6 @@ DOMAIN-SUFFIX, safebrowsing.urlsec.qq.com, REJECT
 DOMAIN-SUFFIX, safebrowsing.googleapis.com, REJECT
 DOMAIN-SUFFIX, lookup.api.bsb.baidu.com, REJECT
 
-# 爱思去开屏广告
-# DOMAIN, d.image.i4.cn, REJECT
-
 # 避免迅雷版权问题
 DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
 DOMAIN, hub5emu.v6.shub.sandai.net, REJECT
@@ -35,10 +32,6 @@ DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 # 贴吧AD处理
 IP-CIDR, 180.76.76.200/32,no-resolve, REJECT
 DOMAIN, im.tieba.baidu.com, REJECT
-
-# 新浪邮箱/飞韵
-# DOMAIN-KEYWORD, pangolin, REJECT
-# DOMAIN-SUFFIX, gdt.qq.com, REJECT
 
 # 中国联通 
 DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
@@ -51,13 +44,6 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 
 # 爱思助手 hostname = list-app-m.i4.cn
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
-
-# 百度输入法 hostname = mime.baidu.com,r6.mo.baidu.com,res.mi.baidu.com
-^http:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg - reject
-^http:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg - reject
-^https:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime - reject
-^https:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list - reject
-^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch - reject
 
 # 豆瓣 hostname = api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
@@ -79,9 +65,6 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 
 # 淘宝 hostname = heic.alicdn.com
 ^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ - reject
-
-# 特狗影视 hostname = 162.209.190.203
-# http://162.209.190.203:510/tegou.php/v6/top_notice - reject
 
 # 新浪邮箱/飞韵 hostname = *.pangolin-*toutiao*.com,*.gdt.qq.com
 ^https:\/\/.*\.gdt\.qq\.com\/gdt_mview.fcg - reject
@@ -115,9 +98,6 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 
 # 趣听屏蔽弹窗 hostname = api.bspapp.com
 # ^https:\/\/api\.bspapp\.com\/client data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
-
-# 淘宝 hostname = heic.alicdn.com  /////////////////////
-# ^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
 # 唯品会  hostname = mapi.appvipshop.com,b.appsimg.com
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"

@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
 
 
 [Script]
@@ -25,7 +25,7 @@ DOMAIN-SUFFIX, safebrowsing.googleapis.com, REJECT
 DOMAIN-SUFFIX, lookup.api.bsb.baidu.com, REJECT
 
 # 爱思去开屏广告
-DOMAIN, d.image.i4.cn, REJECT
+# DOMAIN, d.image.i4.cn, REJECT
 
 # 避免迅雷版权问题
 DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
@@ -48,6 +48,9 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 
 # 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo - reject
+
+# 爱思助手 hostname = list-app-m.i4.cn
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 
 # 豆瓣 hostname = api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject

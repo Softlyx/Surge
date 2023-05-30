@@ -1,0 +1,18 @@
+#!name=百度输入法净化
+#!desc=净化 个人页随机图片
+
+[Map Local]
+# 百度输入法开屏
+^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# 应用内灵感语录 输入页面推荐里语录
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist) data="https://github.com/Keywos/rule/raw/main/mocks/mime.json"
+# 输入法点击图标 
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist data="https://github.com/Keywos/rule/raw/main/mocks/mime.json"
+^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list data="https://github.com/Keywos/rule/raw/main/mocks/mime.json"
+^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input data="https://github.com/Keywos/rule/raw/main/mocks/bd.json"
+
+[Script]
+BDSRF = type=http-response,pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js
+
+[MITM]
+hostname = %APPEND% imeres.baidu.com, mbd.baidu.com, mime.baidu.com

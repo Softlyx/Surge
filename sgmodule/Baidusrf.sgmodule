@@ -12,7 +12,7 @@
 ^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input data="https://github.com/Keywos/rule/raw/main/mocks/bd.json"
 
 [Script]
-BDSRF = type=http-response,pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js
+BDSRF = type=http-response,pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/Surge/main/sgmodule/js/bdsrf.js
 
 [MITM]
 hostname = %APPEND% imeres.baidu.com, mbd.baidu.com, mime.baidu.com

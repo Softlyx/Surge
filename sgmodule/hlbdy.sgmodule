@@ -1,0 +1,6 @@
+#!name=黑料不打烊
+#!desc=黑料不打烊
+
+[Script]
+
+黑料不打烊 = type=cron,cronexp=0 8,15 * * ?,script-path= https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js

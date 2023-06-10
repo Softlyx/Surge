@@ -1,6 +1,13 @@
 #!name=黑料不打烊
 #!desc=黑料不打烊
 
+[Rule]
+
+DOMAIN-SUFFIX,zztt72.com,AProxy // Added for: h7.zztt72.com:443
+IP-CIDR,17.248.165.14/32,AProxy // Added for: 17.248.165.14:443
+DOMAIN,155.fun,AProxy
+DOMAIN,hl03.co,AProxy
+
 [Script]
 
-黑料不打烊 = type=cron,cronexp=0 8,15 * * ?,script-path= https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
+黑料不打烊 = type=cron,cronexp="0 8,15 * * ?",script-path= https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js

@@ -1,5 +1,5 @@
 #!name=自用破解合集
-#!desc=自用破解合集
+#!desc=Emby,Nicegram,Spotify
 
 [MITM]
 hostname = %APPEND% mb3admin.com, restore-access.indream.app, spclient.wg.spotify.com

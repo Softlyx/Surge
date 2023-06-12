@@ -4,7 +4,7 @@
 
 [General]
 
-#force-http-engine-hosts = %APPEND%
+#force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me
 
 
 
@@ -57,6 +57,9 @@ DOMAIN, im.tieba.baidu.com, REJECT
 
 # 爱思助手 hostname = list-app-m.i4.cn
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+
+# 大师兄影视
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject
 
 # 豆瓣 hostname = api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject

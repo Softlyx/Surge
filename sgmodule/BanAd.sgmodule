@@ -1,10 +1,17 @@
 #!name=自用去广告合集
-#!desc=阿里云盘净化,涩涩视频,JavDB,中国联通,555影视,爱思助手,大师兄影视,豆瓣,交管12123,肯德基,美团,拼多多,淘宝,新浪邮箱,飞韵,米家,one,唯品会,迅雷,掌上英雄联盟
+#!desc=阿里云盘净化,涩涩视频,JavDB,爱思助手,淘宝,京东,555影视,豆瓣,盯盯拍,交管12123,肯德基,美团,拼多多,顺丰,新浪邮箱,飞韵,大师兄影视,米家,one,唯品会,迅雷,中国联通,掌上道聚城,掌上英雄联盟
+
+
+[General]
+
+#force-http-engine-hosts = %APPEND%
+
 
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,api.ujvnmkx.cn,list-app-m.i4.cn,search-app-m.i4.cn,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,gab.122.gov.cn,res.kfc.com.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,heic.alicdn.com,162.209.190.203,*.pangolin-*toutiao*.com,*.gdt.qq.com,sdk.alibaba.com.ailbaba.me,home.mi.com,api.0qda82zu.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,mlol.qt.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,api.ujvnmkx.cn,list-app-m.i4.cn, search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com
+
 
 
 [Script]
@@ -17,6 +24,12 @@ hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,ap
 JavDB = type=http-response,pattern=^https?:\/\/api\.(pxxgg\.xyz|ujvnmkx\.cn)\/api,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/JavDB.js,script-update-interval=0
 # 爱思助手 list-app-m.i4.cn, search-app-m.i4.cn
 爱思助手 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Aisizhushou.js,script-update-interval=0
+# 淘宝 acs.m.taobao.com
+淘宝 = type=http-response, pattern=^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/, requires-body=true, max-size=3145728, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, timeout=60, argument=""ems_etao_advertise"->"""
+# 京东 union.click.jd.com
+京东1 = type=http-request, pattern=^https?://union.click.jd.com/sem.php?, script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/replace-header/index.js, timeout=60, argument="^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n)->$1/sem.php?adblock=$2union.click.jd.com$3"
+京东2 = type=http-request, pattern=^https?://union.click.jd.com/jda?, script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/replace-header/index.js, timeout=60, argument="^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n)->$1/jda?adblock=$2union.click.jd.com$3"
+
 
 
 [Rule]
@@ -35,8 +48,6 @@ DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 IP-CIDR, 180.76.76.200/32,no-resolve, REJECT
 DOMAIN, im.tieba.baidu.com, REJECT
 
-# 中国联通 
-DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 
 
 [URL Rewrite]
@@ -47,26 +58,65 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 # 爱思助手 hostname = list-app-m.i4.cn
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 
-# 大师兄影视 hostname = sdk.alibaba.com.ailbaba.me
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/.*?\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
-
 # 豆瓣 hostname = api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
 
+# 盯盯拍 hostname = *.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com
+^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* url reject
+^https?:\/\/api\.htp\.ad-scope\.com\.cn.* url reject
+^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* url reject
+^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* url reject
+
 # 交管12123 hostname = gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery - reject
+
+# 京东 hostname = m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/96405\/17\/28473\/168578\/625cd144E7997a990\/8233ce8a10c4e463\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/182114\/23\/23904\/121433\/62593c9cEd77c4519\/2e3f4c518b771094\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/202971\/34\/26906\/282671\/6319c862E1818d3fa\/0597464cf6bc8e2f\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/143222\/27\/29233\/141967\/631b1f8cE3a112e54\/d3fe0b2f9f0a9f30\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22/22400\/119193\/62562ef0Eff59b4d4 - reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ - reject-array
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin\/na\/m\/getLoadingPicture|aladdin\/na\/m\/getLoadingPicture) - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo - reject
+^https?:\/\/bdsp-x\.jd\.com\/adx\/ - reject
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) - reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ - reject-200
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22\/22400\/119193\/62562ef0Eff59b4d4 - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/220846\/5\/16214\/41327 - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202818 - reject
 
 # 肯德基 hostname = res.kfc.com.cn
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 
-# 美团 hostname = flowplus.meituan.net,img.meituan.net,s3plus.meituan.net
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+ - reject
-^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\?? - reject
+# 美团 hostname = wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net
+^https?:\/\/s3plus\.meituan\.net\/.+?\/linglong\/ - reject
+^https?:\/\/www\.meituan\.com\/api\/v\d\/appstatus\? - reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo\? - reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d\/startpicture - reject
+^https?:\/\/flowplus\.meituan\.net\/v\d\/\w+\/linglong\/\d+\.(gif|jpg|mp4) - reject
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) - reject
+^https?:\/\/apimobile\.meituan\.com\/appupdate\/mach\/checkUpdate? - reject
+^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
+^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|mmc|wmbanner)\/ - reject
 
-# 拼多多广告 hostname = api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com
+# 拼多多 hostname = api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com
 ^https:\/\/adim\.pinduoduo\.com\/i\/toutiao - reject
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+
+# 顺丰 hostname = ccsp-egmas.sf-express.com,shopic.sf-express.com
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ - reject
+^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen - reject
+# 顺丰优选 hostname = mapi.sfbest.com
+^https://mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* - reject
 
 # 淘宝 hostname = heic.alicdn.com
 ^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ - reject
@@ -76,9 +126,10 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 ^https?:\/\/.*\.pangolin-.*toutiao.*\.com - reject
 
 
+
 [Map Local]
 
-# 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com  /////////////////////
+# 555影视广告模块 hostname = vip7.fzwdyy.cn,vpic.cms.qq.com
 ^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
@@ -89,11 +140,18 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 
 # 肯德基 hostname = res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
-# 美团 hostname = flowplus.meituan.net,img.meituan.net,s3plus.meituan.net  /////////////////////
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$ data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+# 京东 hostname = m.360buyimg.com,storage.360buyimg.com
+^https?:\/\/storage\.360buyimg\.com\/kepler-app data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s640x1136_jfs\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+# 美团 hostname = flowplus.meituan.net,img.meituan.net,s3plus.meituan.net
+^https?:\/\/img\.meituan\.net\/(?>adunion|display|midas)\/.+?\.(gif|jpg|jpg\.webp)$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
+^https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
+^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
+^https?:\/\/s3plus\.meituan\.net\/v1\/mss_a002 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 
 # 米家 hostname = home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
@@ -101,17 +159,46 @@ DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
 # one hostname = api.0qda82zu.com
 ^https?:\/\/api\.0qda82zu\.com\/.+\/ad\/space data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
 
-# 趣听屏蔽弹窗 hostname = api.bspapp.com
-# ^https:\/\/api\.bspapp\.com\/client data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt" 
+# 顺丰 hostname = ccsp-egmas.sf-express.com,ucmp.sf-express.com
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+# 顺丰速运小程序
+^https?:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# 淘宝 hostname = acs.m.taobao.com,gw.alicdn.com
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 开屏广告
+^https?:\/\/gw\.alicdn\.com\/imgextra\/i\d\/.+1125-1602\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 # 唯品会  hostname = mapi.appvipshop.com,b.appsimg.com
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 ^https?:\/\/b\.appsimg\.com\/upload\/momin\/202[3-9]{1}\/.+\/.+\/.+\/.+\.jpg!85\.webp data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/coupon\/float_entrance\/get\?api_key data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# APP+小程序弹窗广告
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 右下角悬浮窗，需手动关闭广告一次
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/coupon\/float_entrance\/get\?api_key data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
-# 迅雷 hostname = api-shoulei-ssl.xunlei.com
+# 迅雷 hostname = api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com
 ^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+^https?:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\/ data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 
-# 掌上英雄联盟 hostname = mlol.qt.qq.com
+# 中国联通 hostname = m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+# 掌上道聚城 hostname = djcapp.game.qq.com
+^https:\/\/djcapp\.game\.qq\.com\/daoju\/igw\/main\/\?_service=welink\.ad\.list&_ret_key=result&site_set data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# 掌上英雄联盟 hostname = mlol.qt.qq.com,ossweb-img.qq.com
 ^https:\/\/mlol\.qt\.qq\.com\/go\/recommend data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
+^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"

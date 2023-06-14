@@ -1,5 +1,5 @@
 #!name=自用去广告合集
-#!desc=阿里云盘净化,涩涩视频,JavDB,爱思助手,淘宝,京东,555影视,豆瓣,盯盯拍,交管12123,肯德基,美团,拼多多,顺丰,新浪邮箱,飞韵,大师兄影视,米家,one,唯品会,迅雷,中国联通,掌上道聚城,掌上英雄联盟
+#!desc=阿里云盘净化,涩涩视频,JavDB,爱思助手,淘宝,京东,趣听,555影视,豆瓣,盯盯拍,交管12123,肯德基,美团,拼多多,顺丰,新浪邮箱,飞韵,大师兄影视,米家,one,唯品会,迅雷,中国联通,掌上道聚城,掌上英雄联盟
 
 
 [General]
@@ -10,7 +10,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,api.ujvnmkx.cn,list-app-m.i4.cn, search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,api.ujvnmkx.cn,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,api.bspapp.com,api.next.bspapp.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com
 
 
 
@@ -25,7 +25,7 @@ hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,ap
 # JavDB hostname = api.pxxgg.xyz,api.ujvnmkx.cn
 JavDB = type=http-response,pattern=^https?:\/\/api\.(pxxgg\.xyz|ujvnmkx\.cn)\/api,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/JavDB.js,script-update-interval=0
 
-# 爱思助手 list-app-m.i4.cn, search-app-m.i4.cn
+# 爱思助手 list-app-m.i4.cn,search-app-m.i4.cn
 爱思助手 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Softlyx/QuantumultX/main/AdBlock/Aisizhushou.js,script-update-interval=0
 
 # 淘宝 acs.m.taobao.com
@@ -35,6 +35,8 @@ JavDB = type=http-response,pattern=^https?:\/\/api\.(pxxgg\.xyz|ujvnmkx\.cn)\/ap
 京东1 = type=http-request, pattern=^https?://union.click.jd.com/sem.php?, script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/replace-header/index.js, timeout=60, argument="^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n)->$1/sem.php?adblock=$2union.click.jd.com$3"
 京东2 = type=http-request, pattern=^https?://union.click.jd.com/jda?, script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/replace-header/index.js, timeout=60, argument="^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n)->$1/jda?adblock=$2union.click.jd.com$3"
 
+# 趣听 api.bspapp.com,api.next.bspapp.com
+趣听 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/quting.js, timeout=60, script-update-interval=0
 
 
 [Rule]

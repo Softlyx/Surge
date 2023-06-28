@@ -8,3 +8,4 @@
 汇率监控 = type=cron,cronexp=0 8 * * ?,script-path = https://raw.githubusercontent.com/chxm1023/Task/main/hljk.js
 每日一言 = type=cron,cronexp=0 8 * * ?,script-path = https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/One.js
 每天60s读懂世界 = type=cron,cronexp=0 8 * * ?,script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js
+豆瓣推荐 = type=cron,cronexp=0 8 * * ?,script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js

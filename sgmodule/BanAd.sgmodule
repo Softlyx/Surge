@@ -10,7 +10,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,api.ujvnmkx.cn,api.yijingluowangluo.xyz,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com
+hostname = %APPEND% *.aliyundrive.com,files.yuchenglw.com,files.honghufly.com,api.pxxgg.xyz,api.ujvnmkx.cn,api.yijingluowangluo.xyz,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com,us.l.qq.com
 
 
 
@@ -206,6 +206,7 @@ DOMAIN, im.tieba.baidu.com, REJECT
 # 掌上道聚城 hostname = djcapp.game.qq.com
 ^https:\/\/djcapp\.game\.qq\.com\/daoju\/igw\/main\/\?_service=welink\.ad\.list&_ret_key=result&site_set data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
-# 掌上英雄联盟 hostname = mlol.qt.qq.com,ossweb-img.qq.com
+# 掌上英雄联盟 hostname = mlol.qt.qq.com,ossweb-img.qq.com,us.l.qq.com
+^https?:\/\/us\.l\.qq\.com\/exapp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https:\/\/mlol\.qt\.qq\.com\/go\/recommend data="https://raw.githubusercontent.com/kokoryh/Script/master/data/blank_dict.json"
 ^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"

@@ -1,0 +1,5 @@
+#!name=自用测试
+#!desc=测试效果
+
+[Map Local]
+^https:\/\/gw\.alicdn\.com\/imgextra data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"

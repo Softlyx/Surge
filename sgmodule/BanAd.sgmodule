@@ -10,7 +10,7 @@
 
 [MITM]
 
-hostname = %APPEND% *.aliyundrive.com,api.pxxgg.xyz,api.ujvnmkx.cn,api.yijingluowangluo.xyz,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com,us.l.qq.com
+hostname = %APPEND% *.aliyundrive.com,api.pxxgg.xyz,api.ujvnmkx.cn,api.yijingluowangluo.xyz,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,union.click.jd.com,vip7.fzwdyy.cn,vpic.cms.qq.com,list-app-m.i4.cn,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,m15.360buyimg.com,m.360buyimg.com,api.m.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,res.kfc.com.cn,wmapi.meituan.com,flowplus.meituan.net,peisongapi.meituan.com,img.meituan.net,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,capi.lkcoffee.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,vip7.fzwdyy.cn,vpic.cms.qq.com,sdk.alibaba.com.ailbaba.me,res.kfc.com.cn,m.360buyimg.com,storage.360buyimg.com,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,home.mi.com,api.0qda82zu.com,ccsp-egmas.sf-express.com,ucmp.sf-express.com,acs.m.taobao.com,gw.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com,us.l.qq.com
 
 
 
@@ -115,6 +115,9 @@ DOMAIN, im.tieba.baidu.com, REJECT
 # 拼多多 hostname = api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com
 ^https:\/\/adim\.pinduoduo\.com\/i\/toutiao - reject
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+
+# 瑞幸 hostname = capi.lkcoffee.com
+^https?:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/(homePage\/contactor\/modules|app\/adposNew) - reject
 
 # 顺丰 hostname = ccsp-egmas.sf-express.com,shopic.sf-express.com
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ - reject

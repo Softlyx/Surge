@@ -82,6 +82,8 @@ DOMAIN, im.tieba.baidu.com, REJECT
 
 [Map Local]
 
+# 钉钉 hostname = gw.alicdn.com
+^https:\/\/gw\.alicdn\.com\/imgextra data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 肯德基 
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"

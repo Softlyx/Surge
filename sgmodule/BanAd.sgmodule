@@ -43,10 +43,10 @@ DOMAIN, im.tieba.baidu.com, REJECT
 ^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
 
 # 盯盯拍 hostname = *.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com
-^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* url reject
-^https?:\/\/api\.htp\.ad-scope\.com\.cn.* url reject
-^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* url reject
-^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* url reject
+^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* - reject
+^https?:\/\/api\.htp\.ad-scope\.com\.cn.* - reject
+^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* - reject
+^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* - reject
 
 # 交管12123 hostname = gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject

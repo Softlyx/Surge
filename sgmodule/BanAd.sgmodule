@@ -24,9 +24,9 @@ DOMAIN, im.tieba.baidu.com, REJECT
 IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 # > HDOBOX去广告
-DOMAIN-SUFFIX, applovin.com, REJECT
-DOMAIN-SUFFIX, applvn.com, REJECT
-DOMAIN-SUFFIX, doubleclick.net, REJECT
+# DOMAIN-SUFFIX, applovin.com, REJECT
+# DOMAIN-SUFFIX, applvn.com, REJECT
+# DOMAIN-SUFFIX, doubleclick.net, REJECT
 
 
 

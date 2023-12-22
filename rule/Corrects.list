@@ -12,3 +12,5 @@ PROCESS-NAME,WebTorrent
 PROCESS-NAME,WebTorrent Helper
 # >ipv6测试
 DOMAIN-KEYWORD,test-ipv6
+DOMAIN-KEYWORD,ipv6-test
+DOMAIN-KEYWORD,ipv6

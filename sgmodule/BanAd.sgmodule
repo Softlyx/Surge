@@ -86,6 +86,7 @@ IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 盯盯拍 hostname = app.ddpai.com,appgw.ddpai.com
 ^http:\/\/app\.ddpai\.com\/onroad\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http:\/\/app\.ddpai\.com\/d\/api\/v1\/attention data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^http:\/\/appgw\.ddpai\.com:18080\/market\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 肯德基 

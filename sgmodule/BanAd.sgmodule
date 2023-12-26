@@ -3,7 +3,7 @@
 
 [MITM]
 
-hostname = %APPEND% app.ddpai.com,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,res.kfc.com.cn,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ecapi.lkcoffee.com,capi.lkcoffee.com,m.lkcoffee.com,img0*.luckincoffeecdn.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,home.mi.com,acs.m.taobao.com,gw.alicdn.com,img.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com,us.l.qq.com
+hostname = %APPEND% app.ddpai.com,appgw.ddpai.com,list-app-m.i4.cn,search-app-m.i4.cn,acs.m.taobao.com,api.douban.com,*.pglstatp-toutiao.com,api.htp.ad-scope.com.cn,appgw.ddpai.com,init.sms.mob.com,gab.122.gov.cn,res.kfc.com.cn,api.pinduoduo.com,adim.pinduoduo.com,api.yangkeduo.com,ecapi.lkcoffee.com,capi.lkcoffee.com,m.lkcoffee.com,img0*.luckincoffeecdn.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,mapi.sfbest.com,heic.alicdn.com,*.pangolin-*toutiao*.com,*.gdt.qq.com,home.mi.com,acs.m.taobao.com,gw.alicdn.com,img.alicdn.com,mapi.appvipshop.com,b.appsimg.com,api-shoulei-ssl.xunlei.com,images.client.vip.xunlei.com,m.client.10010.com,m1.ad.10010.com,res.mall.10010.cn,djcapp.game.qq.com,mlol.qt.qq.com,ossweb-img.qq.com,us.l.qq.com
 
 
 
@@ -84,8 +84,9 @@ IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 # 钉钉 hostname = gw.alicdn.com,img.alicdn.com
 ^https:\/\/(gw|img)\.alicdn\.com\/imgextra data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-盯盯拍 hostname = app.ddpai.com
+盯盯拍 hostname = app.ddpai.com,appgw.ddpai.com
 ^http:\/\/app\.ddpai\.com\/onroad\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http:\/\/appgw\.ddpai\.com:18080\/market\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 肯德基 
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"

@@ -1,0 +1,8 @@
+#!name=4 自动监测TF
+#!desc=For those JavaScripts who should be disabled after evaluation successful.
+
+[Script]
+Auto join TF = type=cron,cronexp=0/5 * * * ?,script-path=https://github.com/xf857/jiedian/blob/main/Auto_join_TF.js?raw=true,wake-system=0,timeout=180
+
+[MITM]
+hostname = %APPEND% testflight.apple.com

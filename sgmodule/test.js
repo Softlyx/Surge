@@ -1,5 +1,29 @@
-^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew url reject
-^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList url reject
-^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page url response-body \{.+\} response-body {"status":"SUCCESS"}
-^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main url response-body "popTitle":".+?" response-body "popTitle":""
-^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/[A-Z0-9]{2}/[A-Z0-9]{2}/[a-zA-Z0-9]{29}\.(jpg|jpeg)_\.webp url reject-200
+/***********************************************
+
+
+[rewrite_local]
+
+^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) url script-response-body APPraven.vip.js
+
+[mitm]
+
+hostname = appraven.net
+
+***********************************************/
+var url = $request.url;
+var obj = JSON.parse($response.body);
+const tmp1 = '/AppRaven/app';
+const tmp2 = '/AppRaven/social';
+const tmp3 = '/AppRaven/buy';
+
+if (url.indexOf(tmp1) != -1) {
+	var body = $response.body.replace(/premium": false/g, 'premium": true');
+}
+if (url.indexOf(tmp2) != -1) {
+	var body = $response.body.replace(/premium": false/g, 'premium": true');
+}
+if (url.indexOf(tmp3) != -1) {
+	obj={"success":true,"message":"1896165181","isReceiptValid":true,"isSubscriptionActive":true};
+	body = JSON.stringify(obj);
+}
+$done({body});

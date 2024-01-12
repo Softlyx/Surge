@@ -1,0 +1,10 @@
+#!name=钉钉去开屏
+#!desc=钉钉去开屏
+
+[MITM]
+hostname = %APPEND% gw.alicdn.com,img.alicdn.com
+
+
+[Map Local]
+# 钉钉 hostname = gw.alicdn.com,img.alicdn.com
+^https:\/\/(gw|img)\.alicdn\.com\/imgextra data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"

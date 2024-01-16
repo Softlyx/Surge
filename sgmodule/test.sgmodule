@@ -7,7 +7,7 @@ hostname = *.appraven.net
 
 [Script]
 
-^https?:\/\/*\.appraven\.net\/AppRaven\/(app|social|buy) url script-response-body h
+^https?:\/\/*\.appraven\.net\/AppRaven\/(app|social|buy) url script-response-body https://raw.githubusercontent.com/Softlyx/Surge/main/sgmodule/test.sgmodule
 
 ***********************************************/
 var modifiedHeaders = $request.headers;

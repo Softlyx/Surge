@@ -3,7 +3,7 @@
 
 [mitm]
 
-hostname = *.appraven.net
+hostname = %APPEND% *.appraven.net
 
 [Script]
 

@@ -7,4 +7,4 @@ hostname = %APPEND% *.appraven.net
 
 [Script]
 
-^https?:\/\/*\.appraven\.net\/AppRaven\/(app|social|buy) url script-response-body https://raw.githubusercontent.com/Softlyx/Surge/main/sgmodule/test.js
+^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) url script-response-body https://raw.githubusercontent.com/Softlyx/Surge/main/sgmodule/test.js

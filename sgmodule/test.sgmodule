@@ -1,5 +1,21 @@
-#!name=自用测试
+#!name=APP
 #!desc=测试效果
 
-[Map Local]
-^https:\/\/gw\.alicdn\.com\/imgextra data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+[mitm]
+
+hostname = *.appraven.net
+
+[Script]
+
+^https?:\/\/*\.appraven\.net\/AppRaven\/(app|social|buy) url script-response-body h
+
+***********************************************/
+var modifiedHeaders = $request.headers;
+var operationName = modifiedHeaders['x-apollo-operation-name'];
+
+if (operationName == "GetCurrentUser"||operationName == "GetUserById") {
+  var body = $response.body.replace(/"premium":false/g, '"premium":true');
+  $done({ body: body });
+} else {
+  $done({});
+}

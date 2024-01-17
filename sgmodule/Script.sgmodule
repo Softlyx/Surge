@@ -3,6 +3,6 @@
 
 [Script]
 
+阿里云盘签到 = type=cron,cronexp="10 0 * * ?",script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
 贴吧签到 = type=cron,cronexp=10 1 * * ?,script-path = https://raw.githubusercontent.com/Softlyx/QuantumultX/main/Task/tieba_signin.js
-阿里云盘签到 = type=cron,cronexp="10 0 * * ?",wake-system=1,script-path = https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 B站每日任务 = type=cron,cronexp=30 1 * * ?,script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js

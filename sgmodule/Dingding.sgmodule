@@ -7,4 +7,5 @@ hostname = %APPEND% gw.alicdn.com,img.alicdn.com
 
 [Map Local]
 # 钉钉 hostname = gw.alicdn.com,img.alicdn.com
-^https:\/\/(gw|img)\.alicdn\.com\/imgextra data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/(gw|img)\.alicdn\.com\/imgextra\/.+\/[\w!]+\d+-\d+-.+-\b([2-9]\d{2,}|[1-9]\d{3,})\b-\b([2-9]\d{2,}|[1-9]\d{3,})\b  data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"

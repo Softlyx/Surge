@@ -4,7 +4,7 @@
 
 [MITM] 
 
-hostname= %APPEND% c.tieba.baidu.com, tiebac.baidu.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com
+hostname= %APPEND% c.tieba.baidu.com, tiebac.baidu.com, app.bilibili.com, m.bilibili.com, auth.alipan.com, auth.aliyundrive.com
 
 
 
@@ -25,5 +25,9 @@ B站获取Cookie(APP) = type=http-request,pattern=^https:\/\/app\.bilibili\.com\
 # 阿里云盘  auth.aliyundrive.com
 # 安装后打开：https://auth.aliyundrive.com/v2/account/token 获取token
 # 添加boxjs订阅： https://raw.githubusercontent.com/lowking/Scripts/master/lowking.boxjs.json
-阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.aliyundrive.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+# 阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.aliyundrive.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 # 阿里云盘签到 = type=cron,cronexp="10 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+# 阿里云盘  auth.alipan.com, auth.aliyundrive.com
+阿里云盘签到cookie = type = http-request, pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token, script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, max-size=-1, timeout=60
+# 阿里云盘签到 = type = cron, cronexp="0 7,11 * * *", script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, wake-system=1

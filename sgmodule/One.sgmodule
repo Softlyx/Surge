@@ -3,7 +3,7 @@
 
 
 [MITM]
-hostname = %APPEND% api.4c86d03.com, api.8eb269a.com, push-uat.61b7cb.com, api.979bb9e.com, api.a9a2bc4.com, api.b675211.com, vd.66322c1.com, api.9cbd862.com
+hostname = %APPEND% api.4c86d03.com, api.8eb269a.com, api.979bb9e.com, api.a9a2bc4.com, api.b675211.com, api.9cbd862.com
 
 [URL Rewrite]
 ^https?:\/\/api\.\w+\.com\/v2.5\/(ad\/space|panda\/popup) - reject

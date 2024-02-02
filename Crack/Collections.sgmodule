@@ -1,5 +1,5 @@
 #!name=自用破解合集
-#!desc=Emby,Nicegram,Spotify
+#!desc=Emby, Spotify, Github
 
 [MITM]
 hostname = %APPEND% mb3admin.com, spclient.wg.spotify.com, api.github.com

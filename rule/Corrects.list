@@ -10,6 +10,13 @@ PROCESS-NAME,Transmission
 PROCESS-NAME,uTorrent
 PROCESS-NAME,WebTorrent
 PROCESS-NAME,WebTorrent Helper
+# >玩偶哥哥
+DOMAIN-KEYWORD,wogg.link
+DOMAIN-KEYWORD,wogg.xyz
+DOMAIN-KEYWORD,tvfan.xxooo.cf
+# >小纸条
+DOMAIN-KEYWORD,gitcafe.net
+DOMAIN-KEYWORD,yunluo.oss-cn-shanghai.aliyuncs.com
 # >ipv6测试
 DOMAIN-KEYWORD,test-ipv6
 DOMAIN-KEYWORD,ipv6-test

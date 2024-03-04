@@ -2,5 +2,5 @@
 #!desc=贴吧,阿里云盘
 
 [Script]
-贴吧签到 = type=cron,cronexp=10 1 * * ?,script-path = https://raw.githubusercontent.com/Softlyx/QuantumultX/main/Task/tieba_signin.js
-阿里云盘签到 = type=cron,cronexp="10 0,7,9,11 * * ?",script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+贴吧签到 = type=cron,cronexp=10 1 * * ?,script-path = https://raw.githubusercontent.com/Softlyx/QuantumultX/main/Task/tieba_signin.js,script-update-interval=0,timeout=240
+阿里云盘签到 = type=cron,cronexp="10 0,7,9,11 * * ?",script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js,script-update-interval=0,timeout=240

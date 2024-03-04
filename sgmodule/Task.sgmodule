@@ -3,11 +3,11 @@
 
 [Script]
 
-黑料不打烊 = type=cron,cronexp="0 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
-每天60s读懂世界 = type=cron,cronexp="1 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js
-草榴技术区 = type=cron,cronexp="3 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js
-豆瓣推荐 = type=cron,cronexp="2 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js
-每日一言 = type=cron,cronexp="4 8 * * ?",script-path = https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/One.js
-摸鱼日历 = type=cron,cronexp="5 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
-今日黄历 = type=cron,cronexp="6 8 * * ?",script-path = https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js
-汇率监控 = type=cron,cronexp="7 8 * * ?",script-path = https://raw.githubusercontent.com/chxm1023/Task/main/hljk.js
+黑料不打烊 = type=cron,cronexp="0 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js,script-update-interval=0,timeout=240
+每天60s读懂世界 = type=cron,cronexp="1 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js,script-update-interval=0,timeout=240
+草榴技术区 = type=cron,cronexp="3 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js,script-update-interval=0,timeout=240
+豆瓣推荐 = type=cron,cronexp="2 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js,script-update-interval=0,timeout=240
+每日一言 = type=cron,cronexp="4 8 * * ?",script-path = https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/One.js,script-update-interval=0,timeout=240
+摸鱼日历 = type=cron,cronexp="5 8 * * ?",script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js,script-update-interval=0,timeout=240
+今日黄历 = type=cron,cronexp="6 8 * * ?",script-path = https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=240
+汇率监控 = type=cron,cronexp="7 8 * * ?",script-path = https://raw.githubusercontent.com/chxm1023/Task/main/hljk.js,script-update-interval=0,timeout=240

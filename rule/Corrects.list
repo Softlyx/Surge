@@ -27,19 +27,19 @@ DOMAIN-KEYWORD,tvfan.xxooo.cf
 DOMAIN-KEYWORD,gitcafe.net
 DOMAIN-KEYWORD,yunluo.oss-cn-shanghai.aliyuncs.com
 # >哔嘀影视
-DOMAIN-KEYWORD,www.bdys10.com
-DOMAIN-KEYWORD,www.bdys01.com
+DOMAIN-KEYWORD,bdys10.com
+DOMAIN-KEYWORD,bdys01.com
 # >低端影视
 DOMAIN-KEYWORD,ddys.pro
 DOMAIN-KEYWORD,ddys.mov
 # >在线之家
-DOMAIN-KEYWORD,www.zxzja.com
-DOMAIN-KEYWORD,www.zxzjhd.com
-DOMAIN-KEYWORD,www.zxzj.pro
+DOMAIN-KEYWORD,zxzja.com
+DOMAIN-KEYWORD,zxzjhd.com
+DOMAIN-KEYWORD,zxzj.pro
 # >厂长资源
-DOMAIN-KEYWORD,www.czzy88.com
-DOMAIN-KEYWORD,www.czzy22.com
-DOMAIN-KEYWORD,www.czzy66.com
+DOMAIN-KEYWORD,czzy88.com
+DOMAIN-KEYWORD,czzy22.com
+DOMAIN-KEYWORD,czzy66.com
 # >jojo（直连）
 DOMAIN-KEYWORD, jiohub.top
 # >索尼资源（直连）
@@ -97,8 +97,6 @@ DOMAIN-KEYWORD, xinlangapi.com
 DOMAIN-KEYWORD, kuaiyunzy.com
 # >四圈资源（直连）
 DOMAIN-KEYWORD, fenwe078.cf
-# >快云资源（直连）
-DST-PORT, 1234,DIRECT
 # >哔嘀影视（直连）
 DOMAIN-KEYWORD, bdys10.com
 # >快看资源（直连）

@@ -1,0 +1,35 @@
+{
+"name":"Surge Icon", 
+"description":"Surge Icon", 
+"icons":
+    [
+        {"name":"Apple.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Apple.png"},
+        {"name":"AppleTV.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/AppleTV.png"},
+        {"name":"Cloudflare.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Cloudflare.png"},
+        {"name":"Emby.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Emby.png"},
+        {"name":"Final.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Final.png"},
+        {"name":"GoogleVoice.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/GoogleVoice.png"},
+        {"name":"Infuse.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Infuse.png"},
+        {"name":"Kakarot.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Kakarot.png"},
+        {"name":"Kakarot1.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Kakarot1.png"},
+        {"name":"OpenAI.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/OpenAI.png"},
+        {"name":"Rocket.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Rocket.png"},
+        {"name":"Select.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Select.png"},
+        {"name":"Speedtest.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Speedtest.png"},
+        {"name":"Spotify.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Spotify.png"},
+        {"name":"Surge.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Surge.png"},
+        {"name":"Telegram.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Telegram.png"},
+        {"name":"TikTok.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/TikTok.png"},
+        {"name":"Youtube.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Youtube.png"},
+      
+        {"name":"China.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/China.png"},
+        {"name":"HongKong.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/HongKong.png"},
+        {"name":"Taiwan.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Taiwan.png"},
+        {"name":"Japan.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Japan.png"},
+        {"name":"Singapore.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Singapore.png"},
+        {"name":"USA.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/USA.png"},
+        {"name":"UN.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/UN.png"},
+
+        {"name":"ACA.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/ACA.png"},
+    ]
+}

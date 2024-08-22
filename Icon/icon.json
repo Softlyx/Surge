@@ -1,6 +1,6 @@
 {
-"name":"Surge Icon", 
-"description":"Surge Icon", 
+"name":"Surge Icon",
+"description":"Surge Icon",
 "icons":
     [
         {"name":"Apple.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Apple.png"},
@@ -21,7 +21,7 @@
         {"name":"Telegram.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Telegram.png"},
         {"name":"TikTok.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/TikTok.png"},
         {"name":"Youtube.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Youtube.png"},
-      
+        
         {"name":"China.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/China.png"},
         {"name":"HongKong.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/HongKong.png"},
         {"name":"Taiwan.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/icon/Taiwan.png"},

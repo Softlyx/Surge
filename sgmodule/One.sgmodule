@@ -5,4 +5,5 @@
 api.*.com
 
 
-^https?:\/\/api\..+\.com\/.+\/ad\/space url reject-200
+[Map Local]
+^https?:\/\/api\..+\.com\/.+\/ad\/space data-type=text data=" " status-code=200

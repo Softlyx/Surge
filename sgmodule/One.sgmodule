@@ -2,8 +2,7 @@
 #!desc=ONE去广告
 
 
-[MITM]
-hostname = %APPEND% api.fexsqz.com,api.5ebd5d.com,api.53cuk7g.com,api.a9a2bc4.com,api.ec53y2t.com,api.vf5x3hv.com
+api.*.com
 
-[URL Rewrite]
-^https?:\/\/api\.\w+\.com\/v2.5\/(ad\/space|panda\/popup) - reject
+
+^https?:\/\/api\..+\.com\/.+\/ad\/space url reject-200

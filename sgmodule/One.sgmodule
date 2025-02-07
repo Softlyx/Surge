@@ -2,7 +2,9 @@
 #!desc=ONE去广告
 
 
-api.*.com
+[MITM]
+
+hostname = %APPEND% api.*.com
 
 
 [Map Local]

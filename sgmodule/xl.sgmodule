@@ -1,0 +1,16 @@
+#!name=Xunlei Smart VIP + Fallback System
+#!desc=VIP priority + auto fallback + pseudo 403 avoidance system
+#!author=ChatGPT
+
+[General]
+always-raw-tcp = true
+loglevel = notify
+
+
+[Header Rewrite]
+
+# UA伪装（降低403概率）
+^https?:\/\/.*xunlei.* url-request-header User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15
+
+# Referer修复
+^https?:\/\/.*xunlei.* url-request-header Referer: https://xunlei.com

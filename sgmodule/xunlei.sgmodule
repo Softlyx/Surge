@@ -1,0 +1,11 @@
+#!name=Xunlei Header Fix
+#!desc=Fix User-Agent and Referer for Xunlei 302 playback
+#!author=ChatGPT
+
+[Header Rewrite]
+
+# 迅雷 UA 伪装（iOS Safari）
+^https?:\/\/.*xunlei.* url-request-header User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1
+
+# 迅雷 Referer 修复
+^https?:\/\/.*xunlei.* url-request-header Referer: https://xunlei.com

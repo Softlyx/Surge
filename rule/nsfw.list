@@ -1,0 +1,46 @@
+# =========================
+# 🔞 主流站点
+# =========================
+DOMAIN-SUFFIX, jable.tv
+DOMAIN-SUFFIX, missav.com
+DOMAIN-SUFFIX, missav.ai
+DOMAIN-SUFFIX, missav.ws
+
+DOMAIN-SUFFIX, pornhub.com
+DOMAIN-SUFFIX, xvideos.com
+DOMAIN-SUFFIX, xnxx.com
+DOMAIN-SUFFIX, xhamster.com
+
+DOMAIN-SUFFIX, redtube.com
+DOMAIN-SUFFIX, youporn.com
+DOMAIN-SUFFIX, spankbang.com
+DOMAIN-SUFFIX, tube8.com
+
+DOMAIN-SUFFIX, javdb.com
+DOMAIN-SUFFIX, javbus.com
+DOMAIN-SUFFIX, sehuatang.org
+DOMAIN-SUFFIX, t66y.com
+
+# =========================
+# 🌐 聚合/镜像/跳转域（重点）
+# =========================
+DOMAIN-KEYWORD, porn
+DOMAIN-KEYWORD, xxx
+DOMAIN-KEYWORD, hentai
+DOMAIN-KEYWORD, adult
+DOMAIN-KEYWORD, sex
+
+# =========================
+# 📦 视频聚合站（常见变种）
+# =========================
+DOMAIN-SUFFIX, xvideos-cdn.com
+DOMAIN-SUFFIX, pornhubpremium.com
+DOMAIN-SUFFIX, phncdn.com
+DOMAIN-SUFFIX, pornhub.org
+
+# =========================
+# 🧠 CDN / 图片资源（容易漏）
+# =========================
+DOMAIN-SUFFIX, imgur.com
+DOMAIN-SUFFIX, cdn77.org
+DOMAIN-SUFFIX, cdnxxx.com

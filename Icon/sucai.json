@@ -1,0 +1,9 @@
+{
+"name":"Surge Tubiao",
+"description":"Surge Tubiao",
+"icons":
+    [
+        {"name":"wukong.png", "url":"https://raw.githubusercontent.com/Softlyx/Surge/main/Icon/sucai/wukong.png"},
+
+    ]
+}
